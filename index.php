@@ -1,5 +1,5 @@
 <?php 
-    include_once "src/controller/functions/validacao.php";
+    include_once "src/controller/validacao.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,5 +1,5 @@
 <?php 
-    include_once "../controller/functions/retorno.php";
+    include_once "../controller/retorno.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
