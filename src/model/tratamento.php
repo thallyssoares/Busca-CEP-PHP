@@ -16,20 +16,20 @@
             echo "<p>Cep digitado incorreto</p>";
         } else{
             if(!empty($r["complemento"])){
+                global $rua, $comp, $bairro, $cidade, $estado;
+
                 $rua = $r["logradouro"];
                 $comp = $r["complemento"];
                 $bairro = $r["bairro"];
                 $cidade = $r["localidade"];
                 $estado = $r["uf"];
 
-                echo "<p>Seu endereço: $rua, $comp, $bairro, $cidade - $estado. </p>";
             } else{
                 $rua = $r["logradouro"];
                 $bairro = $r["bairro"];
                 $cidade = $r["localidade"];
                 $estado = $r["uf"];
 
-                echo "<p>Seu endereço: $rua, $bairro, $cidade - $estado. </p>";
             }
         
         }
