@@ -12,25 +12,19 @@
     function result($c){
         conexao($c);
         $r = $GLOBALS["return"];
-        if (isset($r["erro"]) == 1){
+        if (isset($r["erro"])){
             echo "<p>Cep digitado incorreto</p>";
         } else{
-            if(!empty($r["complemento"])){
-                global $rua, $comp, $bairro, $cidade, $estado;
+            
+            global $rua, $comp, $bairro, $cidade, $estado;
 
-                $rua = $r["logradouro"];
-                $comp = $r["complemento"];
-                $bairro = $r["bairro"];
-                $cidade = $r["localidade"];
-                $estado = $r["uf"];
+            $rua = $r["logradouro"];
+            $comp = $r["complemento"];
+            $bairro = $r["bairro"];
+            $cidade = $r["localidade"];
+            $estado = $r["uf"];
 
-            } else{
-                $rua = $r["logradouro"];
-                $bairro = $r["bairro"];
-                $cidade = $r["localidade"];
-                $estado = $r["uf"];
-
-            }
+            
         
         }
 
