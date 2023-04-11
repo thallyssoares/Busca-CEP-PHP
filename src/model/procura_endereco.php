@@ -1,21 +1,23 @@
 <?php 
     function procura($uf, $cidade, $rua){
-        $uf = strtoupper($uf);
-        $url = 'viacep.com.br/ws/'.$uf.'/'.$cidade.'/'.$rua.'/json/';
-        
         $ch = curl_init();
+        $r = str_replace(" ", "+", $rua);
 
-        curl_setopt_array($ch, [ 
-        CURLOPT_URL => $url, 
-        CURLOPT_RETURNTRANSFER => true]);
+        $url = 'https://viacep.com.br/ws/'.$uf.'/'.$cidade.'/'.$r.'/json/';
 
-        global $return_endereco;
+        curl_setopt_array($ch, [
+            CURLOPT_URL => $url, 
+            CURLOPT_RETURNTRANSFER => true
+        ]);
         
         $con = curl_exec($ch);
-        $return_endereco = json_decode($con, true);
-        print_r($return_endereco);
+        global $response;
+
+        $response = json_decode($con, true);
+        
+
         curl_close($ch);
-    }
+        }
     
     
 

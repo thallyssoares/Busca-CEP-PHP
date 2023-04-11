@@ -1,6 +1,5 @@
 <?php 
     include_once "../controller/validacao_endereco.php";
-    include_once "../model/procura_endereco.php";
 
 ?>
 <!DOCTYPE html>
@@ -27,7 +26,7 @@
         </form>
         <?php 
             if(!empty($_POST["rua"]) && !empty($_POST["cidade"]) && !empty($_POST["uf"])){
-                procura($_POST["uf"], $_POST["cidade"], $_POST["rua"]);
+                validacao($_POST["uf"], $_POST["cidade"], $_POST["rua"]);
             } else {
                 echo "<p>Preencha todos os campos</p>";
             }
