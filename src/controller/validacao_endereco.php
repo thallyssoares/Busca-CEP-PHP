@@ -1,5 +1,5 @@
 <?php 
-    include_once "../controller/retorno_endereco.php";
+    include_once "../controller/retorno_cep.php";
 
     function validacao($uf, $cidade, $rua){
         if((strlen($uf)<3) && (strlen($cidade)<3) && (strlen($rua)<3)){

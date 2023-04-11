@@ -1,5 +1,5 @@
 <?php 
-    include_once "../model/tratamento.php";
+    include_once "../model/tratamento_cep.php";
 
     function retorno(){
         $cep = $_GET["cep"];
