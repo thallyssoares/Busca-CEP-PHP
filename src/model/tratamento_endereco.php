@@ -1,16 +1,18 @@
 <?php 
     include_once "procura_endereco.php";
 
-    function tratamento($uf, $cidade, $rua){
+    function tratamento($uf, $cidade, $rua, $bairro){
         procura($uf, $cidade, $rua);
 
         $r = $GLOBALS["response"];
         if(count($r)>1){
-            echo "<p>Foi encontrado mais de um resultado para o endereço informado. Veja abaixo:</p>";
             foreach($r as $indice=>$valor){
-                echo "- ".$valor["logradouro"].", ".$valor["bairro"].", ".$valor["cep"]. "<br>"; 
+                if($bairro == strtolower($valor["bairro"]) && $rua === strtolower($valor["logradouro"])){
+                    echo "<p>Seu endereço: ".$valor["logradouro"].", ".$valor["bairro"].", ".$valor["cep"]. "</p>"."<br>";
+                }
+                
             }
-        }else{
+        } else{
         
             if(!empty($r[0]["complemento"])){
                 $rua = $r[0]["logradouro"];
@@ -30,9 +32,8 @@
 
                 echo "<p>Seu endereço é: $rua, $bairro, $cep, $cidade - $uf.</p>";
             }
-        
-        }
-        
+
+        }   
     }
 
 

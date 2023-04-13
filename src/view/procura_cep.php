@@ -16,24 +16,27 @@
             <label for="rua">Rua:</label>
             <input type="text" name="rua" id="idRua"><br>
 
+            <label for="bairro">Bairro:</label>
+            <input type="text" name="bairro" id="idBairro"><br>
+
             <label for="cidade">Cidade:</label>
             <input type="text" name="cidade" id="idCidade"><br>
 
             <label for="estado">Estado (Apenas as siglas, por favor):</label>
             <input type="text" name="uf" id="idUf"><br>
 
-            <input type="submit" value="Pesquisar">
+            <input type="submit" value="Pesquisar"> <button><a href="../../index.php">Voltar</a></button>
         </form>
         <?php 
-            if(!empty($_POST["rua"]) && !empty($_POST["cidade"]) && !empty($_POST["uf"])){
-                validacao($_POST["uf"], $_POST["cidade"], $_POST["rua"]);
+            if(!empty($_POST["rua"]) && !empty($_POST["cidade"]) && !empty($_POST["uf"]) && !empty($_POST["bairro"])){
+                validacao($_POST["uf"], $_POST["cidade"], $_POST["rua"], $_POST["bairro"]);
             } else {
                 echo "<p>Preencha todos os campos</p>";
             }
             
         
         ?>
-        <a href="../../index.php">Voltar</a>
+        
     </main>
 </body>
 </html>
