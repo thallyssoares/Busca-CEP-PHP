@@ -1,0 +1,116 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --color1: #7290a3;
+    --color2: #c0ddf0;
+    --color3: #f0efa8;
+    --color4: #a3a376;
+    --color5: #eb2f2f; 
+}
+
+body{
+    background-image: linear-gradient(to right, var(--color1), var(--color2));
+    color: var(--color3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+main{
+    width: 400px;
+    height: 400px;
+    padding-top: 100px;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.466);
+}
+
+.buscaArea{
+    margin: 10px;
+}
+
+.buscaArea > input{
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+p{
+    margin: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited {
+    color: Var(--color3);
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+input[type="submit"]{
+    width: 80px;
+    background-color: var(--color1);
+    color: var(--color2);
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.466);
+    cursor: pointer;
+}
+
+.retorno{
+    margin-left: -30px;
+    font-size: 1em;
+    width: 625px;
+}
+
+.voltarButton{
+    width: 80px;
+    height: 20px;
+    background-color: var(--color5);
+    color: var(--color2);
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.466);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.voltarButton > a{
+    text-decoration: none;
+    color: var(--color2);
+}
+
+.inputArea > label{
+    display: inline-block;
+    font-size: 15px;
+    margin: 5px;
+    width: 80px;
+    font-size: 1em;
+}
+
+.inputArea > input{
+    border-radius: 5px;
+    border: none;
+    height: 20px;
+}
+
+.pesqButton {
+    width: 80px;
+    height: 20px;
+    background-color: var(--color5);
+    color: var(--color2);
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.466);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@media (max-width:800px){
+    .retorno{
+        margin-left: -10px;
+        font-size: 20px;
+        width: 400px;
+    }
+}

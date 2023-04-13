@@ -8,24 +8,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/styles.css">
     <title>Procura do CEP</title>
 </head>
 <body>
     <main>
+        <h1>Busca do CEP</h1>
         <form action="" method="post">
-            <label for="rua">Rua:</label>
-            <input type="text" name="rua" id="idRua"><br>
+            <div class="inputArea">
+                <label for="rua">Rua:</label>
+                <input type="text" name="rua" id="idRua"><br>
 
-            <label for="bairro">Bairro:</label>
-            <input type="text" name="bairro" id="idBairro"><br>
+                <label for="bairro">Bairro:</label>
+                <input type="text" name="bairro" id="idBairro"><br>
 
-            <label for="cidade">Cidade:</label>
-            <input type="text" name="cidade" id="idCidade"><br>
+                <label for="cidade">Cidade:</label>
+                <input type="text" name="cidade" id="idCidade"><br>
 
-            <label for="estado">Estado (Apenas as siglas, por favor):</label>
-            <input type="text" name="uf" id="idUf"><br>
-
-            <input type="submit" value="Pesquisar"> <button><a href="../../index.php">Voltar</a></button>
+                <label for="estado">Estado:</label>
+                <input type="text" name="uf" id="idUf"><br>
+            </div>
+            <input type="submit" value="Pesquisar" class="pesqButton"> <button class="voltarButton"><a href="../../index.php">Voltar</a></button>
         </form>
         <?php 
             if(!empty($_POST["rua"]) && !empty($_POST["cidade"]) && !empty($_POST["uf"]) && !empty($_POST["bairro"])){
